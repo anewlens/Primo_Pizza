@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    /* VARIABLES */
+    --primoRed: rgb(160, 0, 0);
+    --pale: rgb(235, 229, 218);
+    --pale-dark: rgb(214, 208, 197);
+    --notBlack: rgb(51, 40, 35);
+    --notGray: rgb(61, 50, 44);
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--notBlack);
+}
+
+body {
+    background-color: var(--pale);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .6rem 10rem .6rem 3rem;
+}
+
+.title {
+    font-family: 'Concert One', sans-serif;
+    font-size: 6.8rem;
+    color: var(--primoRed);
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(51, 40, 35);
+    font-size: 3rem;
+    margin-right: 4rem;
+    transition: all .2s;
+}
+
+nav a:hover {
+    color: var(--primoRed);
+    transform: translateX(3px);
+}
+
+.hero {
+    background-image: url('./images/pizza_hero.jpg');
+    background-size: cover;
+    background-color:transparent;
+    background-attachment: fixed;
+    height: 90vh;
+    padding: 0 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text {
+    font-size: 6rem;
+    color: var(--pale);
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.about {
+    border-top: .7rem solid var(--primoRed);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.label-container {
+    padding: .5rem;
+    background-color: var(--primoRed);
+    border-radius: 0 0 1rem 1rem;
+}
+
+.label {
+    text-align: center;
+    width: 25rem;
+    font-size: 3rem;
+    color: var(--pale);
+    letter-spacing: .4rem;
+}
+
+.about-grid {
+    display: flex;
+    justify-content: space-between;
+    margin: 7rem 5vw 10rem 5vw;
+    color: var(--notBlack);
+}
+
+.about-feature {
+    margin: 0 5rem;
+    max-width: 25vw; 
+}
+
+.about-feature h3 {
+    margin-bottom: 1.5rem;
+    font-family: 'Concert One', sans-serif;
+    font-size: 5rem;
+    text-align: center;
+    color: var(--primoRed);
+}
+
+.about-feature p {
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+.menu {
+    background-color: var(--pale-dark);
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-title {
+    background-image: url('./images/pizza_1.jpg');
+    background-size: cover;
+    background-color:transparent;
+    background-attachment: fixed;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Concert One', sans-serif;
+    font-size: 8rem;
+    color: var(--pale);
+    text-align: center;
+}
+
+.menu-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3vh 5vw 0 5vw;
+}
+
+.menu-section:last-child {
+    margin-bottom: 5vh
+}
+
+.section-title {
+    font-family: 'Concert One', sans-serif;
+    font-size: 5rem;
+    color: var(--primoRed);
+}
+
+.section-subtitle {
+    width: 50%;
+    font-size: 2rem;
+    color: var(--notGray);
+    font-style: italic;
+    text-align: center;
+}
+
+.item-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.section-item {
+    margin: 3rem 5rem;
+    flex-grow: 1;
+    max-width: 25%;
+}
+
+.item-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--notGray);
+}
+
+.item-description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    color: var(--notBlack);
+}
+
+.location {
+    height: 30vh;
+}
