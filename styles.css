@@ -18,22 +18,36 @@ html {
 
 body {
     background-color: var(--pale);
+    scroll-behavior: smooth;
 }
 
-nav {
+.nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: .6rem 10rem .6rem 3rem;
+    position: fixed;
+    background-color: var(--pale);
+    width: 100vw;
+    z-index: 2;
 }
 
 .title {
     font-family: 'Concert One', sans-serif;
     font-size: 6.8rem;
     color: var(--primoRed);
+    text-decoration: none;
 }
 
-nav a {
+.toTop {
+    text-decoration: none;
+}
+
+.nav-links {
+    margin-right: 10rem;
+}
+
+.nav-option {
     text-decoration: none;
     color: rgb(51, 40, 35);
     font-size: 3rem;
@@ -41,7 +55,7 @@ nav a {
     transition: all .2s;
 }
 
-nav a:hover {
+.nav-option:hover {
     color: var(--primoRed);
     transform: translateX(3px);
 }
@@ -51,7 +65,7 @@ nav a:hover {
     background-size: cover;
     background-color:transparent;
     background-attachment: fixed;
-    height: 90vh;
+    height: 99.5vh;
     padding: 0 5vw;
     display: flex;
     justify-content: center;
@@ -71,6 +85,7 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     font-family: 'Roboto', sans-serif;
+    background-color: var(--pale-dark);
 }
 
 .label-container {
@@ -133,16 +148,53 @@ nav a:hover {
     text-align: center;
 }
 
+.menu-nav {
+    width: 8vw;
+    background-color: var(--pale);
+    margin: 10rem 3rem;
+    padding: 0rem 0;
+    border: 2px solid var(--primoRed);
+    border-radius: 2rem;
+    display:flex;
+    flex-direction:column;
+        position: -webkit-sticky;
+    position: sticky;
+    top: 12rem;
+    bottom: 10rem;
+    right: 3rem;
+    z-index: 1;
+}
+
+.menu-filter {
+    padding: 1rem 2rem;
+    border-radius: 1.4rem;
+    color: var(--primoRed);
+    font-size: 2.5rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.selected {
+    color: var(--pale);
+    background-color: var(--primoRed);
+}
+
+
 .menu-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3vh 5vw 0 5vw;
+    padding: 0 10vw 0 10vw;
+}
+
+.pizzas {
+    margin-top: -30rem;
 }
 
 .menu-section:last-child {
     margin-bottom: 5vh
 }
+
 
 .section-title {
     font-family: 'Concert One', sans-serif;
@@ -184,4 +236,49 @@ nav a:hover {
 
 .location {
     height: 30vh;
+}
+
+.location-title {
+    background-image: url('./images/pizza_neon.jpg');
+    background-size: cover;
+    background-color:transparent;
+    background-attachment: fixed;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Concert One', sans-serif;
+    font-size: 8rem;
+    color: var(--pale);
+    text-align: center;
+}
+
+.mapContainer {
+    display: flex;
+    justify-content: space-around;
+
+    margin: 3rem 15vw;
+}
+
+#mapid {
+    height: 40vh;
+    width: 40vw;
+}
+
+.location-details {
+    margin: 3rem;
+}
+
+.detail-chunk {
+    margin-bottom: 3rem;
+}
+
+.location-heading {
+    font-size: 4.5rem;
+    font-family: 'Concert One', sans-serif;
+    color: var(--primoRed);
+}
+
+.address {
+    font-size: 2.5rem;
 }

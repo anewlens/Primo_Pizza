@@ -4,17 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
     <link href="https://fonts.googleapis.com/css?family=Concert+One|Roboto:300,400&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="styles.css">
     <title>Primo Pizza</title>
 </head>
 
 <body>
+    <span id='top'></span>
     <nav class="nav">
-        <h1 class="title">Primo Pizza</h1>
+        <a href="#top" class='toTop'><h1 class="title">Primo Pizza</h1></a>
         <span class='nav-links'>
+            <a href="#about" class="nav-option">About Us</a>
             <a href="#menu" class="nav-option">Menu</a>
-            <a href="#location" class="nav-option">Location</a>
             <a href="#contact" class="nav-option">Contact</a>
         </span>
     </nav>
@@ -23,7 +30,7 @@
             Delivering Pizza to Mechanicsville since 2007
         </h2>
     </section>
-    <section class="about">
+    <section class="about" id="about">
         <div class="label-container">
             <h3 class="label">Who We Are</h3>
         </div>
@@ -41,7 +48,7 @@
                         As one of the premiere delivery restaurants in Mechanicsville, we want to serve our local community with quality food at a quick serve pace. We use fresh ingredients, and even source locally produced food items when in season. We live here too and we want to help keep our local economy strong and prosperous. Think local, buy local, and be a good neighbor.
                 </p>
             </div>
-            
+
             <div class="about-feature">
                 <h3>Convenient</h3>
                 <p>
@@ -56,8 +63,9 @@
         <header class="menu-title">
             Menu
         </header>
-        <nav class="menu-nav"></nav>
-        <div class="menu-section pizzas">
+        <div class="menu-wrapper">
+                <nav class="menu-nav"><a href="#pizza" class="menu-filter selected">Pizza</a><a href="#subs" class="menu-filter">Subs</a><a href="#salads" class="menu-filter">Salads</a></nav>
+        <div class="menu-section pizzas" id='pizza'>
             <h3 class="section-title">
                 Pizzas
             </h3>
@@ -116,7 +124,7 @@
             </div>
         </div>
 
-        <div class="menu-section pizzas">
+        <div class="menu-section">
                 <h3 class="section-title">
                     Specialty Pizzas
                 </h3>
@@ -262,7 +270,7 @@
                 </div>
             </div>
 
-            <div class="menu-section subs">
+            <div class="menu-section" id="subs">
                 <h3 class="section-title">
                     Subs
                 </h3>
@@ -399,14 +407,33 @@
                     </div>
                 </div>
             </div>
+            </div>
     </section>
 
-    <section class="location" id="location">
+    <section class="location" id="contact">
+        <header class="location-title">
+            Where To Find Us
+        </header>
+        <div class="mapContainer">
+            <div id="mapid"></div>
+            <div class="location-details">
+                <div class="detail-chunk">
+                    <h3 class="location-heading">
+                        Dine-In & Take-Out
+                    </h3>
+                    <p class="address">6102 Brashier Blvd. Suite 1</p>
+                    <p class="address">Mechanicsville, VA 23111</p>
+                </div>
 
+                <div class="detail-chunk">
+                    <h3 class="location-heading">
+                        Deliver
+                    </h3>
+                    <p class="address">804-569-7707​</p>
+                </div>
+            </div>
+        </div>
     </section>
-
-    <section class="contact" id="contact">
-
-    </section>
+    <script src="./main.js"></script>
 </body>
 </html>
