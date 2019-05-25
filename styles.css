@@ -117,7 +117,7 @@ body {
 
 .hero {
     background-image: url('./images/pizza_hero.jpg');
-    background-size: cover;
+    background-size: contain;
     background-color:transparent;
     background-attachment: fixed;
     background-position: center;
