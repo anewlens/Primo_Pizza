@@ -41,7 +41,7 @@ menuFilter.childNodes.forEach(option => {
 
 
 //MAP API
-var mymap = L.map('mapid').setView([37.616227, -77.321073], 19);
+var mymap = L.map('mapid').setView([37.616227, -77.321073], 17);
 var marker = L.marker([37.616227, -77.321073], {
     color: 'red' 
 }).addTo(mymap);
