@@ -1,3 +1,15 @@
+//MOBILE MENU
+const buttonContainer = document.querySelector('.burger-container')
+const button = document.querySelector('.burger')
+
+buttonContainer.addEventListener('click', () => {
+    console.log(event)
+    button.classList.toggle('is-open')
+})
+
+
+
+//MENU NAV STYLES
 const menuFilter = document.querySelector('.menu-nav')
 
 menuFilter.childNodes.forEach(option => {

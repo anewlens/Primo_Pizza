@@ -31,26 +31,23 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: .6rem 10rem .6rem 3rem;
+    padding: 0;
     position: fixed;
     background-color: var(--pale);
-    width: 100vw;
+    width: 100%;
     z-index: 2;
 }
 
 .title {
     font-family: 'Concert One', sans-serif;
-    font-size: 6.8rem;
+    font-size: 6.5rem;
     color: var(--primoRed);
     text-decoration: none;
+    margin-left: 3rem;
 }
 
 .toTop {
     text-decoration: none;
-}
-
-.nav-links {
-    margin-right: 10rem;
 }
 
 .nav-option {
@@ -66,6 +63,53 @@ body {
     transform: translateX(3px);
 }
 
+.burger-container {
+    height: 5rem;
+    outline: none;
+    background: none;
+    border: none;
+    margin-right: 3rem;
+}
+
+.burger {
+    position: relative;
+	display: block;
+	width: 3.5rem;
+	height: 4px;
+	margin: 0 1rem;
+	background: var(--primoRed);
+	transition: all .275s ease-out;
+}
+
+.burger:after,
+.burger:before {
+	content: '';
+	display: block;
+	height: 100%;
+	background: var(--primoRed);
+	transition: all .275s ease-out;
+}
+
+.burger:before {
+    transform: translateY(-1.1rem);
+}
+
+.burger:after {
+	transform: translateY(.8rem);
+}
+
+.is-open {
+    transform: translateY(-2px) rotate(-45deg);
+}
+
+.is-open:before {
+	transform: translateY(0px) rotate(90deg);
+}
+
+.is-open:after {
+	transform: translateY(-12px) translateX(10px);
+    opacity: 0;
+}
 
 /* 
     HERO 
@@ -313,13 +357,26 @@ body {
 
 
 /* MEDIA QUERIES */
-  
+    /* 
+    ##Device = Large Desktops
+    ##Screen = 1280+px 
+  */
+
+@media screen and (min-width: 1281px) {
+
+    .burger-container {
+        display: none;
+    }
+
+}
+
+
   /* 
     ##Device = Laptops, Desktops
     ##Screen = 1025px to 1280px
   */
   @media screen and (min-width: 1025px) and (max-width: 1280px) {
-    
+
     .menu-nav {
         margin: 10rem 3rem;
         align-items: center;
@@ -327,6 +384,10 @@ body {
         bottom: 10rem;
         right: 3rem;
         overflow: hidden;
+    }
+
+    .burger-container {
+        display: none;
     }
     
     .menu-filter {
@@ -348,6 +409,7 @@ body {
 
   }
   
+
   /* 
     ##Device = Tablets, Ipads (portrait)
     ##Screen = 768px to 1024px
@@ -355,20 +417,32 @@ body {
   
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     
- 
-    
-  }
-  
-  /* 
-    ##Device = Tablets, Ipads (landscape)
-    ##Screen = B/w 768px to 1024px
-  */
-  
-  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    
+    .title {
+        font-size: 5.5rem;
+    }
 
+    .nav-links {
+        display: none;
+    }
     
+    .hero-text {
+        font-size: 5rem;
+    }
+
+    .label {
+        font-size: 2.5rem;
+    }
+
+    .about-grid {
+        flex-direction: column;
+    }
+
+    .about-feature {
+        max-width: 50vw;
+        margin-bottom: 5rem;
+    }
   }
+  
   
   /* 
     ##Device = Low Resolution Tablets, Mobiles (Landscape)
@@ -376,18 +450,82 @@ body {
   */
   
   @media (min-width: 481px) and (max-width: 767px) {
+    .nav-links {
+        display: none;
+    }
     
-  
+    .title {
+        font-size: 5.5rem;
+        overflow: visible;
+    }
     
+    .hero-text {
+        font-size: 5rem;
+    }
+
+    .label {
+        font-size: 2.5rem;
+    }
+
+    .about-grid {
+        flex-direction: column;
+    }
+
+    .about-feature {
+        max-width: 80vw;
+        margin-bottom: 5rem;
+    }
   }
+
   
   /* 
     ##Device = Most of the Smartphones Mobiles (Portrait)
     ##Screen = B/w 320px to 479px
   */
   
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media (max-width: 480px) {
     
+    .title {
+        font-size: 4rem;
+        margin-left: 1.5rem;
+    }
+
+    .burger-container {
+        margin-right: 1.5rem;
+    }
+
+    .burger {
+        width: 2.9rem;
+        height: 3px;
+    }
+
+    .burger:before {
+        transform: translateY(-.9rem);
+    }
+
+    .burger:after {
+        transform: translateY(.6rem);
+    }
+
+    .nav-links {
+        display: none;
+    }
  
-    
+    .hero-text {
+        font-size: 4rem;
+    }
+
+    .label {
+        font-size: 2rem;
+    }
+
+    .about-grid {
+        flex-direction: column;
+    }
+
+    .about-feature {
+        max-width: 50vw;
+        margin-bottom: 5rem;
+    }
   }
+  
