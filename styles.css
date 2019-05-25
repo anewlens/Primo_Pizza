@@ -121,6 +121,7 @@ body {
     background-color:transparent;
     background-attachment: fixed;
     background-position: center;
+    overflow: hidden;
     height: 99.5vh;
     padding: 0 5vw;
     display: flex;
@@ -724,9 +725,9 @@ body {
     }
     
     .hero {
-        background-size: auto 100vh;
+        background-size: auto 100%;
     }
-    
+
     .hero-text {
         font-size: 3rem;
     }
