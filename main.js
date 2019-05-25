@@ -1,10 +1,23 @@
 //MOBILE MENU
 const buttonContainer = document.querySelector('.burger-container')
 const button = document.querySelector('.burger')
+const navBar = document.querySelector('.nav-links')
+
+const sidebarFunc = () => {
+    button.classList.toggle('is-open')
+    navBar.classList.toggle('sidebar')
+    buttonContainer.classList.toggle('button-open')
+}
 
 buttonContainer.addEventListener('click', () => {
     console.log(event)
-    button.classList.toggle('is-open')
+    sidebarFunc()
+})
+
+navBar.childNodes.forEach(link => {
+    link.addEventListener('click', () => {
+        sidebarFunc()
+    })
 })
 
 
