@@ -117,7 +117,7 @@ body {
 
 .hero {
     background-image: url('./images/pizza_hero.jpg');
-    background-size: contain;
+    background-size: cover;
     background-color:transparent;
     background-attachment: fixed;
     background-position: center;
@@ -499,6 +499,10 @@ body {
         margin: 0;
     }
     
+    .hero {
+        background-size: auto 100vh;
+    }
+
     .hero-text {
         font-size: 5rem;
     }
@@ -587,6 +591,9 @@ body {
         margin: 0;
     }
     
+    .hero {
+        background-size: auto 100vh;
+    }
 
     .hero-text {
         font-size: 5rem;
@@ -715,7 +722,11 @@ body {
         color: var(--pale);
         z-index: 100;
     }
-
+    
+    .hero {
+        background-size: auto 100vh;
+    }
+    
     .hero-text {
         font-size: 3rem;
     }
