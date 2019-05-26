@@ -206,6 +206,7 @@ body {
     background-size: cover;
     background-color:transparent;
     background-attachment: fixed;
+    background-position: center;
     height: 30vh;
     display: flex;
     justify-content: center;
@@ -318,6 +319,7 @@ body {
     background-size: cover;
     background-color:transparent;
     background-attachment: fixed;
+    background-position: center;
     height: 30vh;
     display: flex;
     justify-content: center;
@@ -499,10 +501,6 @@ body {
         font-size: 3rem;
         margin: 0;
     }
-    
-    .hero {
-        background-size: auto 100vh;
-    }
 
     .hero-text {
         font-size: 5rem;
@@ -590,10 +588,6 @@ body {
         font-family: 'Concert One', 'Roboto', sans-serif;
         font-size: 3rem;
         margin: 0;
-    }
-    
-    .hero {
-        background-size: auto 100vh;
     }
 
     .hero-text {
@@ -755,6 +749,10 @@ body {
         font-size: 1.6rem;
         line-height: 2.5rem;
     }
+    
+    .menu-title {
+        background-attachment: scroll;
+    }
 
     .menu-section {
         padding: 0;
@@ -773,6 +771,11 @@ body {
     .section-item {
         max-width: 75vw;
         text-align: center;
+    }
+
+    .location-title {
+        background-attachment: scroll;
+        font-size: 6rem;
     }
 
     .mapContainer {
