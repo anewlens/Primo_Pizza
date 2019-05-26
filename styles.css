@@ -249,35 +249,7 @@ body {
 }
 
 .menu-nav {
-    width: 10vw;
-    background-color: var(--pale);
-    margin: 10rem 3rem;
-    padding: 0rem 0;
-    border: 2px solid var(--primoRed);
-    border-radius: 2rem;
-    display:flex;
-    flex-direction:column;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 12rem;
-    bottom: 10rem;
-    right: 3rem;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.menu-filter {
-    padding: 1rem 2rem;
-    border-radius: 1.4rem;
-    color: var(--primoRed);
-    font-size: 2.5rem;
-    text-decoration: none;
-    text-align: center;
-}
-
-.selected {
-    color: var(--pale);
-    background-color: var(--primoRed);
+    display: none;
 }
 
 
@@ -289,9 +261,6 @@ body {
     margin-top: 5rem;
 }
 
-.pizzas {
-    margin-top: -30rem;
-}
 
 .menu-section:last-child {
     margin-bottom: 5vh
@@ -470,13 +439,14 @@ body {
         display: none;
     }
     
-    
-    .menu-section {
-        padding: 0 10vw 0 10vw;
+    .toppings {
+        flex-basis: 50%;
+        max-width: 50%;
+        text-align: center;
     }
 
-    .pizzas {
-        margin-top: -30rem;
+    .menu-section {
+        padding: 0 10vw 0 10vw;
     }
 
     .mapContainer {
@@ -554,22 +524,44 @@ body {
     }
 
     .menu-nav {
-        margin: 10rem 3rem;
-        align-items: center;
-        top: 12rem;
-        bottom: 10rem;
-        right: 3rem;
+        background-color: var(--pale);
+        margin: 3rem;
+        padding: 0rem 0;
+        border: 2px solid var(--primoRed);
+        border-radius: 2rem;
+        display:flex;
+        justify-content: space-between;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 9rem;
+        bottom: 9rem;
         overflow: hidden;
+        z-index: 1;
     }
 
     .menu-filter {
-        width: 100%;
-        border-radius: 0rem;
+        padding: 1rem;
+        border-radius: 1.4rem;
+        color: var(--primoRed);
+        font-size: 2rem;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .toppings {
+        flex-basis: 50%;
+        max-width: 70%;
+        text-align: center;
     }
 
     .mapContainer {
         flex-direction: column;
         align-items: center;
+    }
+
+    .selected {
+        color: var(--pale);
+        background-color: var(--primoRed);
     }
 
     #mapid {
@@ -657,6 +649,43 @@ body {
     .about-feature {
         max-width: 80vw;
         margin-bottom: 5rem;
+    }
+
+    .menu-nav {
+        background-color: var(--pale);
+        margin: 2rem;
+        padding: 0rem 0;
+        border: 2px solid var(--primoRed);
+        border-radius: 2rem;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 9rem;
+        bottom: 9rem;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .menu-filter {
+        flex-basis: 20%;
+        padding: 1rem;
+        border-radius: 1.4rem;
+        color: var(--primoRed);
+        font-size: 2rem;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .mapContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .selected {
+        color: var(--pale);
+        background-color: var(--primoRed);
     }
 
     .menu-section {
@@ -758,7 +787,7 @@ body {
     }
 
     
-    .sidebar .nav-option {
+    .nav-option {
         color: var(--pale-dark);
         font-family: 'Concert One', 'Roboto', sans-serif;
         font-size: 3rem;
@@ -768,6 +797,10 @@ body {
     .sidebar ~ .toTop .title {
         color: var(--pale);
         z-index: 100;
+    }
+
+    .subMenu-open {
+        display: none;
     }
     
     .hero {
@@ -784,6 +817,7 @@ body {
 
     .about-grid {
         flex-direction: column;
+        margin: 5vw;
     }
 
     .about-feature {
@@ -806,8 +840,47 @@ body {
         background-attachment: scroll;
     }
 
+    .menu-nav {
+        background-color: var(--pale);
+        margin: 1rem;
+        padding:0;
+        border: 2px solid var(--primoRed);
+        border-radius: 2rem;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 6rem;
+        bottom: 9rem;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .menu-filter {
+        flex-basis: 20%;
+        padding: .5rem;
+        border-radius: 1.4rem;
+        color: var(--primoRed);
+        font-size: 1.6rem;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .mapContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .selected {
+        color: var(--pale);
+        background-color: var(--primoRed);
+    }
+
+
     .menu-section {
         padding: 0;
+        margin: 0;
     }
 
     .section-title {
@@ -821,7 +894,7 @@ body {
     }
 
     .section-item {
-        max-width: 75vw;
+        max-width: 90vw;
         text-align: center;
     }
 
