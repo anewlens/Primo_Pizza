@@ -1,11 +1,11 @@
 //MOBILE MENU
 const buttonContainer = document.querySelector('.burger-container')
 const button = document.querySelector('.burger')
-const navBar = document.querySelector('.nav-links')
+const navLinks = document.querySelector('.nav-links')
 
 const sidebarFunc = () => {
     button.classList.toggle('is-open')
-    navBar.classList.toggle('sidebar')
+    navLinks.classList.toggle('sidebar')
     buttonContainer.classList.toggle('button-open')
 }
 
@@ -14,12 +14,33 @@ buttonContainer.addEventListener('click', () => {
     sidebarFunc()
 })
 
-navBar.childNodes.forEach(link => {
+navLinks.childNodes.forEach(link => {
     link.addEventListener('click', () => {
         sidebarFunc()
     })
 })
 
+//NAVBAR DROPDOWN
+const menuOption = document.getElementById('menuOption')
+const subMenu = document.querySelector('.subMenu')
+const deadZones = [...document.getElementsByClassName('deadZones')]
+const navbar = document.querySelector('.nav')
+
+menuOption.addEventListener('mouseover', () => {
+    subMenu.classList.add('subMenu-open')
+})
+
+navbar.addEventListener('mouseleave', () => {
+    subMenu.classList.remove('subMenu-open')
+})
+
+// deadZones.map(btn => {
+//     btn.addEventListener('mouseover', () => {
+//         if (subMenu.classList.contains('subMenu-open')) {
+//             subMenu.classList.remove('subMenu-open')
+//         }
+//     })
+// })
 
 
 //MENU NAV STYLES
