@@ -320,7 +320,7 @@ body {
     background-size: cover;
     background-color:transparent;
     background-attachment: fixed;
-    background-position: center;
+    background-position: top ;
     height: 30vh;
     padding: 0 5vw;
     display: flex;
